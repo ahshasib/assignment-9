@@ -5,6 +5,7 @@ import Register from "../Pages/Register";
 import Homelayout from "../layout/Homelayout";
 import Home from "../Pages/Home";
 import Eventdetails from "../Pages/Eventdetails";
+import Authlayout from "../layout/Authlayout";
 
 
 const router = createBrowserRouter(
@@ -27,7 +28,7 @@ const router = createBrowserRouter(
         },
         {
             path:"/auth",
-            
+            Component: Authlayout,
             children:[
                 {
                     path:"/auth/login",

@@ -42,8 +42,8 @@ const Navbar = () => {
     </ul>
   </div>
   <div class="navbar-end space-x-3">
-    <Link to="" className='btn btn-neutral'>Login</Link>
-    <Link to="" className='btn btn-neutral'>Register</Link>
+    <Link to="/auth/login" className='btn btn-neutral'>Login</Link>
+    <Link to="/auth/register" className='btn btn-neutral'>Register</Link>
   </div>
 </div>
     </div>
