@@ -1,0 +1,57 @@
+[
+    {
+      "id": 1,
+      "thumbnail": "https://i.ibb.co.com/fVjS1g4v/vecteezy-futuristic-technology-concept-with-human-hand-touching-55758825.jpg",
+      "name": "Future Tech Expo 2025",
+      "category": "Tech",
+      "date": "2025-06-15",
+      "location": "San Francisco, CA",
+      "entry_fee": "$50"
+    },
+    {
+      "id": 2,
+      "thumbnail": "https://i.ibb.co.com/Q3MsMjb9/female-painter-uses-oil-paints-create-masterpiece-canvas.jpg",
+      "name": "Modern Art Fair",
+      "category": "Art",
+      "date": "2025-07-22",
+      "location": "New York, NY",
+      "entry_fee": "$20"
+    },
+    {
+      "id": 3,
+      "thumbnail": "https://example.com/images/ai-summit.jpg",
+      "name": "AI & Robotics Summit",
+      "category": "Tech",
+      "date": "2025-08-10",
+      "location": "Boston, MA",
+      "entry_fee": "Free"
+    },
+    {
+      "id": 4,
+      "thumbnail": "https://example.com/images/art-gallery.jpg",
+      "name": "Creative Minds Gallery",
+      "category": "Art",
+      "date": "2025-09-05",
+      "location": "Austin, TX",
+      "entry_fee": "$15"
+    },
+    {
+      "id": 5,
+      "thumbnail": "https://example.com/images/innovation-week.jpg",
+      "name": "Innovation Week",
+      "category": "Tech",
+      "date": "2025-10-01",
+      "location": "Seattle, WA",
+      "entry_fee": "$30"
+    },
+    {
+      "id": 6,
+      "thumbnail": "https://example.com/images/art-experience.jpg",
+      "name": "Interactive Art Experience",
+      "category": "Art",
+      "date": "2025-11-18",
+      "location": "Chicago, IL",
+      "entry_fee": "$25"
+    }
+  ]
+  
