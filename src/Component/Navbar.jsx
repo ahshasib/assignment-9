@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { use } from 'react'
 import { Link } from 'react-router'
+import { Authcontext } from '../provider/Authprovider'
 
 const Navbar = () => {
+  const {user} = use(Authcontext)
   return (
     <div className='bg-base-100 shadow-sm'>
         <div class="navbar w-11/12 mx-auto">
@@ -42,6 +44,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div class="navbar-end space-x-3">
+    {user && user.email}
     <Link to="/auth/login" className='btn btn-neutral'>Login</Link>
     <Link to="/auth/register" className='btn btn-neutral'>Register</Link>
   </div>
