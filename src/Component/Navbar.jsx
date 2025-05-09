@@ -1,9 +1,17 @@
 import React, { use } from 'react'
 import { Link } from 'react-router'
 import { Authcontext } from '../provider/Authprovider'
-
+import { FaRegUserCircle } from "react-icons/fa";
 const Navbar = () => {
-  const {user} = use(Authcontext)
+  const {user, logout} = use(Authcontext)
+ const handlelogout = () =>{
+  logout().then(() => {
+    alert("Sign-out successful")
+  }).catch((error) => {
+    console.log(error)
+  });
+ }
+
   return (
     <div className='bg-base-100 shadow-sm'>
         <div class="navbar w-11/12 mx-auto">
@@ -44,9 +52,24 @@ const Navbar = () => {
     </ul>
   </div>
   <div class="navbar-end space-x-3">
+  {
+    user && user.photoURL ? (
+      <img className="w-12 rounded-full" src={user.photoURL} alt="User" />
+    ) : (
+      <FaRegUserCircle className="text-3xl text-gray-500" />
+    )
+  }
     {user && user.email}
-    <Link to="/auth/login" className='btn btn-neutral'>Login</Link>
-    <Link to="/auth/register" className='btn btn-neutral'>Register</Link>
+    {
+      user ? (
+          <button className='btn btn-neutral' onClick={handlelogout}>Logout</button>
+      ) : (
+        <Link to="/auth/login" className='btn btn-neutral'>Login</Link>
+      )
+
+    }
+   
+    {/* <Link to="/auth/register" className='btn btn-neutral'>Register</Link> */}
   </div>
 </div>
     </div>

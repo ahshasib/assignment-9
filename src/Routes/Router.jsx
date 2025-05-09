@@ -6,6 +6,8 @@ import Homelayout from "../layout/Homelayout";
 import Home from "../Pages/Home";
 import Eventdetails from "../Pages/Eventdetails";
 import Authlayout from "../layout/Authlayout";
+import Privetroute from "../provider/Privetroute";
+import Loading from "../Pages/Loading";
 
 
 const router = createBrowserRouter(
@@ -20,8 +22,11 @@ const router = createBrowserRouter(
                 },
                 {
                     path:"/event/:id",
-                    Component:Eventdetails,
-                    loader:() => fetch("/CartData.json")
+                    element: <Privetroute>
+                                <Eventdetails></Eventdetails>
+                            </Privetroute>,
+                    loader:() => fetch("/CartData.json"),
+                    HydrateFallback:<Loading></Loading>
 
                 }
             ]

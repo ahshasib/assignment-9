@@ -12,12 +12,18 @@ const Eventdetails = () => {
         if (data) {
           const foundEvent = data.find(item => item.id == id);
           setevent(foundEvent);
-          setloader(false);
+          
         }
       }, [data, id]);
 
-      if(loader){
-        return <p className="text-white">লোড হচ্ছে...</p>;
+      // if(loader){
+      //   return <p className="text-white">লোড হচ্ছে...</p>;
+      // }
+
+
+      const showreserve = (e) =>{
+        e.preventDefault();
+        alert("you are added")
       }
 
 
@@ -26,8 +32,32 @@ const Eventdetails = () => {
        {
         event ? (
           <>
+            <div className='flex gap-10 items-center w-full'>
+            <div>
+            <img className='w-[50%]' src={event.thumbnail} alt="" />
             <h2 className='text-white text-6xl'>{event.name}</h2>
-            <p>{event.location}</p>
+            <p className='text-white'>{event.location}</p>
+
+            </div>
+
+            
+      <div class="card bg-base-100 w-full mx-auto mt-16 max-w-sm shrink-0 shadow-2xl">
+      <form onSubmit={showreserve}  class="card-body">
+        <fieldset class="fieldset">
+          <label class="label">Email</label>
+          <input name='email' type="email" class="input" placeholder="Email" />
+          <label class="label">Password</label>
+          <input name='password' type="password" class="input" placeholder="Password" />
+          <div><a class="link link-hover">Forgot password?</a></div>
+        
+          <button type='submit' class="btn btn-neutral mt-4">Reserve Seat</button>
+         
+        </fieldset>
+      </form>
+    </div>
+              
+            </div>
+            
           </>
         ) : (
           <p>ডেটা পাওয়া যায়নি</p>
