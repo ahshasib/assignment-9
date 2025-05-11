@@ -1,11 +1,16 @@
 import React, { Suspense } from 'react'
 import Slider_com from '../Component/Slider_com'
 import Events from '../Component/Events'
+import { Helmet } from 'react-helmet-async'
 
 const Home = () => {
   return (
     <div>
- <div>
+
+      <Helmet>
+        <title>Home | Local Events</title>
+      </Helmet>
+    <div>
                 <Slider_com></Slider_com>
                 
             </div>

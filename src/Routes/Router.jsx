@@ -7,6 +7,10 @@ import Home from "../Pages/Home";
 import Eventdetails from "../Pages/Eventdetails";
 import Authlayout from "../layout/Authlayout";
 import Privetroute from "../provider/Privetroute";
+
+import ForgetPass from "../Pages/ForgetPass";
+import About from "../Pages/About";
+import My_profile from "../Pages/My_profile";
 import Loading from "../Pages/Loading";
 
 
@@ -26,9 +30,14 @@ const router = createBrowserRouter(
                                 <Eventdetails></Eventdetails>
                             </Privetroute>,
                     loader:() => fetch("/CartData.json"),
-                    HydrateFallback:<Loading></Loading>
+                    // HydrateFallback:<Loading></Loading>
 
-                }
+                },
+                {
+                    path:"/about",
+                    Component:About
+                },
+            
             ]
         },
         {
@@ -42,13 +51,23 @@ const router = createBrowserRouter(
                 {
                     path:"/auth/register",
                     Component:Register
+                },
+                {
+                    path:"/auth/forgetpassword",
+                    Component:ForgetPass
+                },
+                {
+                    path:"/auth/profile",
+                    Component:My_profile
                 }
             ]
         },
         {
             path:"/*",
             element:<h1>this error</h1>
-        }
+        },
+        
+
     ]
 );
 export default router ;

@@ -1,10 +1,11 @@
-import React, { use, useState } from 'react'
+import React, { use, useRef, useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router'
 import { auth, Authcontext } from '../provider/Authprovider'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FcGoogle } from 'react-icons/fc';
-import { GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
+import { GoogleAuthProvider, sendPasswordResetEmail, signInWithPopup } from 'firebase/auth';
+import { Helmet } from 'react-helmet-async';
 
 
 const Login = () => {
@@ -12,14 +13,16 @@ const [error, setError] = useState("")
 const {signIn }  = use (Authcontext);
 const location = useLocation();
 const navigate = useNavigate();
-const googleProvider = new GoogleAuthProvider
+const googleProvider = new GoogleAuthProvider();
+const emailref = useRef()
 
 const handleGoogleLogin = () =>{
 signInWithPopup(auth, googleProvider)
 .then(result =>{
-
+  const user = result.user;
+  navigate(location.state ? location.state : "/");
 })
-.cath(error =>{
+.catch(error =>{
   console.log(error)
 })
 }
@@ -63,26 +66,44 @@ else{
 });
 }
 
+const handleforgetpass = () =>{
+  const email = emailref.current.value;
+  navigate("/auth/forgetpassword", { state: { email } });
+ 
+  //  setError("")
+
+  // sendPasswordResetEmail(auth, email)
+  // .then(()=>{
+  //   alert("you want to reset your password")
+  // })
+  // .catch(error=>{
+  // setError(error.message)
+  // })
+}
+
 
   return (
     <div>
       <ToastContainer />
-      <div class="card bg-base-100 w-full mx-auto mt-16 max-w-sm shrink-0 shadow-2xl">
-      <form onSubmit={handleLogin} class="card-body">
-        <fieldset class="fieldset">
-          <label class="label">Email</label>
-          <input name='email' type="email" class="input" placeholder="Email" required/>
-          <label class="label">Password</label>
+      <Helmet>
+        <title>Login | Local Events</title>
+      </Helmet>
+      <div className="card bg-base-100 w-full mx-auto mt-16 max-w-sm shrink-0 shadow-2xl">
+      <form onSubmit={handleLogin} className="card-body">
+        <fieldset className="fieldset">
+          <label className="label">Email</label>
+          <input name='email' type="email" class="input" placeholder="Email" ref={emailref} required/>
+          <label className="label">Password</label>
           <input name='password' type="password" class="input" placeholder="Password" required/>
-          <div><a class="link link-hover">Forgot password?</a></div>
+          <div onClick={handleforgetpass} className='pt-3 underline'><a class="link link-hover text-md font-bold ">Forgot password?</a></div>
           {
             error && <p className='text-red-400'>{error}</p>
           }
         
-          <button type='submit' class="btn btn-neutral mt-4">Login</button>
+          <button type='submit' className="btn btn-neutral mt-4">Login</button>
           <hr className='my-4 text-gray-500'/>
           <button onClick={handleGoogleLogin} className='btn'><FcGoogle size={24} /> Continue with Google</button>
-          <p className='text-red-400'><Link to="/auth/register">register</Link></p>
+          <p className='font-bold pt-4 text-base'><Link to="/auth/register">Don't have any account? <span className='text-red-500 underline'>Register</span></Link></p>
         </fieldset>
       </form>
     </div>

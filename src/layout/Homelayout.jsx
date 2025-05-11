@@ -3,6 +3,7 @@ import Navbar from '../Component/Navbar'
 
 import Home from '../Pages/Home'
 import { Outlet } from 'react-router'
+import Footer from '../Component/Footer'
 
 
 const Homelayout = () => {
@@ -23,7 +24,7 @@ const Homelayout = () => {
 
 
     <footer>
-
+    <Footer></Footer>
     </footer>
     
     </>

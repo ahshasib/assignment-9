@@ -1,57 +1,82 @@
 [
-    {
-      "id": 1,
-      "thumbnail": "https://i.ibb.co.com/fVjS1g4v/vecteezy-futuristic-technology-concept-with-human-hand-touching-55758825.jpg",
-      "name": "Future Tech Expo 2025",
-      "category": "Tech",
-      "date": "2025-06-15",
-      "location": "San Francisco, CA",
-      "entry_fee": "$50"
-    },
-    {
-      "id": 2,
-      "thumbnail": "https://i.ibb.co.com/Q3MsMjb9/female-painter-uses-oil-paints-create-masterpiece-canvas.jpg",
-      "name": "Modern Art Fair",
-      "category": "Art",
-      "date": "2025-07-22",
-      "location": "New York, NY",
-      "entry_fee": "$20"
-    },
-    {
-      "id": 3,
-      "thumbnail": "https://example.com/images/ai-summit.jpg",
-      "name": "AI & Robotics Summit",
-      "category": "Tech",
-      "date": "2025-08-10",
-      "location": "Boston, MA",
-      "entry_fee": "Free"
-    },
-    {
-      "id": 4,
-      "thumbnail": "https://example.com/images/art-gallery.jpg",
-      "name": "Creative Minds Gallery",
-      "category": "Art",
-      "date": "2025-09-05",
-      "location": "Austin, TX",
-      "entry_fee": "$15"
-    },
-    {
-      "id": 5,
-      "thumbnail": "https://example.com/images/innovation-week.jpg",
-      "name": "Innovation Week",
-      "category": "Tech",
-      "date": "2025-10-01",
-      "location": "Seattle, WA",
-      "entry_fee": "$30"
-    },
-    {
-      "id": 6,
-      "thumbnail": "https://example.com/images/art-experience.jpg",
-      "name": "Interactive Art Experience",
-      "category": "Art",
-      "date": "2025-11-18",
-      "location": "Chicago, IL",
-      "entry_fee": "$25"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "thumbnail": "https://i.ibb.co.com/fVjS1g4v/vecteezy-futuristic-technology-concept-with-human-hand-touching-55758825.jpg",
+    "name": "Tech Summit 2025",
+    "category": "Tech",
+    "date": "10 Feb",
+    "location": "International Convention City Bashundhara, Dhaka",
+    "entry_fee": "৳700",
+    "details": "Explore the future of technology with top tech companies, AI showcases, and innovation panels. Get hands-on with emerging tools, network with industry leaders, and discover what's next in robotics, IoT, and more. From immersive VR zones to startup expos—this summit has it all. Ideal for developers, entrepreneurs, and curious minds."
+  },
+  {
+    "id": 2,
+    "thumbnail": "https://i.ibb.co.com/Q3MsMjb9/female-painter-uses-oil-paints-create-masterpiece-canvas.jpg",
+    "name": "Rajshahi Art Fair",
+    "category": "Art",
+    "date": "05 Jun",
+    "location": "Rajshahi Shilpokola Academy",
+    "entry_fee": "Free",
+    "details": "A vibrant display of paintings, sculptures, and handmade crafts by local artists. Engage in live art sessions, meet the creators behind the masterpieces, and even try your hand at creative workshops. Perfect for art lovers, collectors, and families. Come celebrate the colorful spirit of Rajshahi’s art scene."
+  },
+  {
+    "id": 3,
+    "thumbnail": "https://i.ibb.co.com/MyVyK9Bs/vecteezy-close-up-of-a-professional-football-player-dribbling-the-29632880.jpg",
+    "name": "National Football Carnival",
+    "category": "Sports",
+    "date": "20 Jan",
+    "location": "Sher-e-Bangla National Stadium, Mirpur",
+    "entry_fee": "৳300",
+    "details": "Watch your favorite teams battle it out in this full-day football carnival packed with energy. Enjoy thrilling matches, skill challenges, live commentary, and a buzzing fan zone. Food stalls, music, and fun games await families and fans of all ages. Wear your team colors and be part of the action!"
+  },
+  {
+    "id": 4,
+    "thumbnail": "https://i.ibb.co.com/p66k1130/vecteezy-teacher-and-students-in-computer-lab-classroom-12445181.jpg",
+    "name": "Digital Marketing Masterclass",
+    "category": "Workshop",
+    "date": "22 Feb",
+    "location": "BITM Center, Dhaka",
+    "entry_fee": "৳500",
+    "details": "Learn SEO, Social Media Ads, and Marketing Funnels from top trainers in the country. This hands-on workshop covers strategy, content planning, analytics, and conversion optimization. Get industry-ready tips, real-life case studies, and certificates upon completion. A must-attend for marketers, freelancers, and startups."
+  },
+  {
+    "id": 5,
+    "thumbnail": "https://i.ibb.co.com/MynyQZWg/vecteezy-young-adult-guitarist-performing-rock-music-on-stage-24946033.jpg",
+    "name": "Night of Classical Music",
+    "category": "Music",
+    "date": "18 Jan",
+    "location": "Sylhet Auditorium",
+    "entry_fee": "৳250",
+    "details": "Enjoy an enchanting night of classical tunes performed by Bangladesh's finest musicians. From soulful ragas to powerful orchestral pieces, let the music transport you. Special performances by acclaimed instrumentalists and vocalists await. A serene evening for music lovers of all generations."
+  },
+  {
+    "id": 6,
+    "thumbnail": "https://i.ibb.co.com/35sCWKtq/thoughtful-teenager-reading-near-female-friends.jpg",
+    "name": "Book Fair & Author Meet-Up",
+    "category": "Education",
+    "date": "01 Sep",
+    "location": "Bangla Academy, Dhaka",
+    "entry_fee": "Free",
+    "details": "Meet popular authors, attend book launches, and grab your favorite books at discounted prices. Participate in live reading sessions, book signings, and literary quizzes. Explore rare titles and connect with fellow readers in a lively, inspiring environment. A celebration of books, ideas, and creativity."
+  },
+  {
+    "id": 7,
+    "thumbnail": "https://i.ibb.co.com/991qQMSh/beautiful-woman-walking-spring-park.jpg",
+    "name": "Chattogram Photowalk 2025",
+    "category": "Photography",
+    "date": "12 Oct",
+    "location": "Patenga Sea Beach, Chattogram",
+    "entry_fee": "৳150",
+    "details": "Join a community of photographers in this scenic photo walk with live tutorials and contests. Capture breathtaking seascapes, candid moments, and golden-hour portraits. Learn tips from professionals on framing, lighting, and storytelling. Whether you're using a DSLR or smartphone, all are welcome!"
+  },
+  {
+    "id": 8,
+    "thumbnail": "https://i.ibb.co.com/TqWxv6cn/vecteezy-ai-generated-a-neon-lit-robotic-hand-a-symbol-of-innovation-38469534.jpg",
+    "name": "Robotics & Innovation Fair",
+    "category": "Science",
+    "date": "05 Sep",
+    "location": "Khulna University Auditorium",
+    "entry_fee": "৳400",
+    "details": "A national-level robotics exhibition featuring school and university innovations, demos, and competitions. See intelligent bots in action, from AI cars to rescue robots. Interact with young inventors and learn how technology is solving real-world problems. A thrilling tech event for all ages!"
+  }
+]

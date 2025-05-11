@@ -1,7 +1,8 @@
 import React, { use } from 'react'
-import { Link } from 'react-router'
+import { Link, NavLink } from 'react-router'
 import { Authcontext } from '../provider/Authprovider'
 import { FaRegUserCircle } from "react-icons/fa";
+import "../index.css"
 const Navbar = () => {
   const {user, logout} = use(Authcontext)
  const handlelogout = () =>{
@@ -13,8 +14,8 @@ const Navbar = () => {
  }
 
   return (
-    <div className='bg-base-100 shadow-sm'>
-        <div class="navbar w-11/12 mx-auto">
+    <div className='bg-yellow-50 shadow-sm fixed top-0 left-0 z-50 w-full'>
+        <div class="navbar w-11/12 mx-auto ">
   <div class="navbar-start">
     <div class="dropdown">
       <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -23,43 +24,29 @@ const Navbar = () => {
       <ul
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Item 1</a></li>
-        <li>
-          <a>Parent</a>
-          <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </li>
-        <li><a>Item 3</a></li>
+        <li><a>Home</a></li>
+        <li><a>About</a></li>
+        <li><a>My Profile</a></li>
       </ul>
     </div>
-    <a class="btn btn-ghost text-xl">daisyUI</a>
+    <Link to="/" class=" text-2xl font-bold">Meet<span className='text-sky-500'>Matic</span></Link>
   </div>
   <div class="navbar-center hidden lg:flex">
-    <ul class="menu menu-horizontal px-1">
-      <li><a>Item 1</a></li>
-      <li>
-        <details>
-          <summary>Parent</summary>
-          <ul class="p-2">
-            <li><a>Submenu 1</a></li>
-            <li><a>Submenu 2</a></li>
-          </ul>
-        </details>
-      </li>
-      <li><a>Item 3</a></li>
+    <ul class="menu menu-horizontal px-1 space-x-1">
+      <li className='font-bold'><NavLink to="/">Home</NavLink></li>
+      <li className='font-bold'><NavLink to="/about">About</NavLink></li>
+      <li className='font-bold'><NavLink to="/auth/profile">My Profile</NavLink></li>
     </ul>
   </div>
   <div class="navbar-end space-x-3">
   {
     user && user.photoURL ? (
-      <img className="w-12 rounded-full" src={user.photoURL} alt="User" />
+      <img className="w-12 rounded-full" src={user.photoURL} alt="User" title={user.displayName}/>
     ) : (
       <FaRegUserCircle className="text-3xl text-gray-500" />
     )
   }
-    {user && user.email}
+    <p className='hidden md:inline text-bold text-sm px-2'>{user && user.email}</p>
     {
       user ? (
           <button className='btn btn-neutral' onClick={handlelogout}>Logout</button>
