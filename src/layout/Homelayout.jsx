@@ -4,6 +4,7 @@ import Navbar from '../Component/Navbar'
 import Home from '../Pages/Home'
 import { Outlet } from 'react-router'
 import Footer from '../Component/Footer'
+import LastSection from '../Component/LastSection'
 
 
 const Homelayout = () => {
@@ -19,6 +20,8 @@ const Homelayout = () => {
         <section>
            <Outlet></Outlet>
         </section>
+
+        
     </main>
 
 

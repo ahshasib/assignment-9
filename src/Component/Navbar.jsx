@@ -24,12 +24,12 @@ const Navbar = () => {
       <ul
         tabindex="0"
         class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>My Profile</a></li>
+        <li className='font-bold'><NavLink to="/">Home</NavLink></li>
+      <li className='font-bold'><NavLink to="/about">About</NavLink></li>
+      <li className='font-bold'><NavLink to="/auth/profile">My Profile</NavLink></li>
       </ul>
     </div>
-    <Link to="/" class=" text-2xl font-bold">Meet<span className='text-sky-500'>Matic</span></Link>
+    <Link to="/" class=" text-2xl font-bold">Meet<span className='text-yellow-500'>Matic</span></Link>
   </div>
   <div class="navbar-center hidden lg:flex">
     <ul class="menu menu-horizontal px-1 space-x-1">
@@ -49,9 +49,9 @@ const Navbar = () => {
     <p className='hidden md:inline text-bold text-sm px-2'>{user && user.email}</p>
     {
       user ? (
-          <button className='btn btn-neutral' onClick={handlelogout}>Logout</button>
+          <button className='btn bg-yellow-500' onClick={handlelogout}>Logout</button>
       ) : (
-        <Link to="/auth/login" className='btn btn-neutral'>Login</Link>
+        <Link to="/auth/login" className='btn bg-yellow-500'>Login</Link>
       )
 
     }

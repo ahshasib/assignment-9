@@ -12,6 +12,7 @@ import ForgetPass from "../Pages/ForgetPass";
 import About from "../Pages/About";
 import My_profile from "../Pages/My_profile";
 import Loading from "../Pages/Loading";
+import Error from "../Pages/Error";
 
 
 const router = createBrowserRouter(
@@ -64,7 +65,7 @@ const router = createBrowserRouter(
         },
         {
             path:"/*",
-            element:<h1>this error</h1>
+            Component:Error
         },
         
 
