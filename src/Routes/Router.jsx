@@ -38,31 +38,34 @@ const router = createBrowserRouter(
                     path:"/about",
                     Component:About
                 },
+                {
+                    path:"/auth",
+                    Component: Authlayout,
+                    children:[
+                        {
+                            path:"/auth/login",
+                            Component:Login
+                        },
+                        {
+                            path:"/auth/register",
+                            Component:Register
+                        },
+                        {
+                            path:"/auth/forgetpassword",
+                            Component:ForgetPass
+                        },
+                        {
+                            path:"/auth/profile",
+                            Component:My_profile
+                        }
+                        
+                    ]
+                },
+               
             
             ]
         },
-        {
-            path:"/auth",
-            Component: Authlayout,
-            children:[
-                {
-                    path:"/auth/login",
-                    Component:Login
-                },
-                {
-                    path:"/auth/register",
-                    Component:Register
-                },
-                {
-                    path:"/auth/forgetpassword",
-                    Component:ForgetPass
-                },
-                {
-                    path:"/auth/profile",
-                    Component:My_profile
-                }
-            ]
-        },
+        
         {
             path:"/*",
             Component:Error

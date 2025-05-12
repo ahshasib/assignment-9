@@ -68,7 +68,7 @@ const Eventdetails = () => {
                       <p className='text-xl text-yellow-500 font-bold pt-2'>Amount: {event.entry_fee}</p>
                       </div>
 
-                      <button type='submit' className="btn bg-yellow-500 mt-4">Submit</button>
+                      <button type='submit' className="btn bg-yellow-500 mt-4">Reserve Seat</button>
                     </fieldset>
                   </form>
                 </div>

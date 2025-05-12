@@ -27,12 +27,12 @@ const Events = () => {
 
             <div className="card-body items-center text-center">
             
-            <div class="rating rating-xs">
-              <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="1 star" />
-              <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="2 star" checked="checked" />
-              <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="3 star" />
-              <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="4 star" />
-              <input type="radio" name="rating-5" class="mask mask-star-2 bg-orange-400" aria-label="5 star" />
+            <div className="rating rating-xs">
+              <input type="radio" name={`rating-${cart.id}`} className="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name={`rating-${cart.id}`} className="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name={`rating-${cart.id}`} className="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name={`rating-${cart.id}`} className="mask mask-star-2 bg-orange-400" />
+              <input type="radio" name={`rating-${cart.id}`} className="mask mask-star-2 bg-orange-400" />
             </div>
 
 

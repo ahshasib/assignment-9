@@ -5,12 +5,15 @@ import { Authcontext } from '../provider/Authprovider'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Helmet } from 'react-helmet-async';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 
 const Register = () => {
 
 const {createUser, Setuser, updateuser} = use(Authcontext);
 const [passError,setPassError] = useState("");
+const [showPassword, setShowPassword] = useState(false);
+
 const navigate = useNavigate();
 
   const handleRegester = (e)=>{
@@ -67,28 +70,39 @@ const navigate = useNavigate();
        <Helmet>
         <title>Register | Local Events</title>
       </Helmet>
-      <div class="card bg-base-100 w-full mx-auto mt-16 max-w-sm shrink-0 shadow-2xl">
+      <div className='h-screen pt-10 '>
+      <div class="card w-full mx-auto mt-16 max-w-sm shrink-0 shadow-2xl bg-transparent border border-yellow-500">
+        <h2 className='text-white font-bold text-center py-5 bg-yellow-500 rounded-t-lg'>Please Register</h2>
       <form onSubmit={handleRegester} class="card-body">
         <fieldset class="fieldset">
-        <label class="label">Name</label>
+        <label class="label text-white">Name</label>
         <input name='name' type="text" class="input" placeholder="Name" required/>
 
-        <label class="label">Photo Url</label>
+        <label class="label text-white">Photo Url</label>
         <input name='photo' type="text" class="input" placeholder="Photo Url" required/>
 
-          <label class="label">Email</label>
+          <label class="label text-white">Email</label>
           <input name='email' type="email" class="input" placeholder="Email" required/>
 
-          <label class="label">Password</label>
-          <input name='password' type="password" class="input" placeholder="Password" required/>
-          {passError && <p className='text-red-400'>{passError}</p>}
+          <div className=' relative'>
+          <label class="label text-white">Password</label>
+          <input name='password' type={showPassword ? "text" : "password"} class="input" placeholder="Password" required/>
+          <span
+            className="absolute right-6 top-8 cursor-pointer text-gray-700"
+            onClick={() => setShowPassword(!showPassword)}
+            >
+            {showPassword ? <FaEye />: <FaEyeSlash /> }
+          </span>
+          </div>
+         {passError && <p className='text-red-400'>{passError}</p>}
         
-          <button type='submit' class="btn btn-neutral mt-4">register</button>
-          <p className='font-bold text-base pt-4'><Link to="/auth/login">Already have an account. <span className='text-red-500 underline'>Login</span></Link></p>
+          <button type='submit' class="btn bg-yellow-500 mt-4">register</button>
+          <p className='font-bold text-base pt-4 text-white'><Link to="/auth/login">Already have an account. <span className='text-red-500 underline'>Login</span></Link></p>
         </fieldset>
       </form>
     </div>
     </div>
+      </div>
   )
 }
 

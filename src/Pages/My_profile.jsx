@@ -2,6 +2,8 @@ import React, { use, useState } from 'react';
 import { Authcontext } from '../provider/Authprovider';
 import { updateProfile } from 'firebase/auth'; 
 import { auth } from '../provider/Authprovider'; 
+import Navbar from '../Component/Navbar';
+import Footer from '../Component/Footer';
 
 const My_profile = () => {
     const { user } = use(Authcontext); 
@@ -28,13 +30,16 @@ const My_profile = () => {
     };
 
     return (
-        <div className="mt-36 max-w-md mx-auto p-5 border rounded-lg shadow-lg bg-yellow-100">
-            <h2 className="text-2xl font-bold mb-4">My Profile</h2>
+        <div className='h-screen'>
+        <div className='pt-40'>
+            
+        <div className="max-w-md mx-auto p-5 border rounded-lg shadow-lg bg-transparent border-yellow-500">
+            <h2 className="text-2xl font-bold mb-4 text-white text-center bg-yellow-500 py-5">My Profile</h2>
             {user ? (
                 <div className='space-y-4'>
                     
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Name:</label>
+                        <label className="block text-sm font-medium text-white">Name:</label>
                         <input 
                             type="text" 
                             value={name} 
@@ -45,7 +50,7 @@ const My_profile = () => {
                     
                     
                     <div>
-                        <label className="block text-sm font-medium text-gray-700">Photo URL:</label>
+                        <label className="block text-sm font-medium text-white">Photo URL:</label>
                         <input 
                             type="text" 
                             value={photoURL} 
@@ -67,14 +72,19 @@ const My_profile = () => {
 
                     
                     <div className="mt-4">
-                        <p><strong>Name:</strong> {user.displayName}</p>
-                        <p><strong>Email:</strong> {user.email}</p>
+                        <p className='text-white'><strong>Name:</strong> {user.displayName}</p>
+                        <p className='text-white'><strong>Email:</strong> {user.email}</p>
                         {user.photoURL && <img src={user.photoURL} alt="User" className="w-24 h-24 rounded-full object-cover" />}
                     </div>
                 </div>
+
             ) : (
-                <p>Don't have any account please Login or Register.</p>
+                <p className='text-white font-bold'>Don't have any account please Login or Register.</p>
             )}
+        </div>
+
+        </div>
+        
         </div>
     );
 };

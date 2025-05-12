@@ -88,24 +88,27 @@ const handleforgetpass = () =>{
       <Helmet>
         <title>Login | Local Events</title>
       </Helmet>
-      <div className="card bg-base-100 w-full mx-auto mt-16 max-w-sm shrink-0 shadow-2xl">
+    <div className='h-screen pt-10'>
+    <div className="card bg-transparent border border-yellow-500  w-full mx-auto mt-16 max-w-sm shrink-0 shadow-2xl">
+      <h2 className='text-white font-bold text-center py-5 bg-yellow-500 rounded-t-lg'>Please Login</h2>
       <form onSubmit={handleLogin} className="card-body">
         <fieldset className="fieldset">
-          <label className="label">Email</label>
+          <label className="label text-white">Email</label>
           <input name='email' type="email" class="input" placeholder="Email" ref={emailref} required/>
-          <label className="label">Password</label>
+          <label className="label text-white">Password</label>
           <input name='password' type="password" class="input" placeholder="Password" required/>
-          <div onClick={handleforgetpass} className='pt-3 underline'><a class="link link-hover text-md font-bold ">Forgot password?</a></div>
+          <div onClick={handleforgetpass} className='pt-3 underline text-white '><a class="link link-hover text-md font-bold ">Forgot password?</a></div>
           {
             error && <p className='text-red-400'>{error}</p>
           }
         
-          <button type='submit' className="btn btn-neutral mt-4">Login</button>
+          <button type='submit' className="btn bg-yellow-500 font-bold mt-4">Login</button>
           <hr className='my-4 text-gray-500'/>
           <button onClick={handleGoogleLogin} className='btn'><FcGoogle size={24} /> Continue with Google</button>
-          <p className='font-bold pt-4 text-base'><Link to="/auth/register">Don't have any account? <span className='text-red-500 underline'>Register</span></Link></p>
+          <p className='font-bold pt-4 text-base text-white'><Link to="/auth/register">Don't have any account? <span className='text-red-500 underline'>Register</span></Link></p>
         </fieldset>
       </form>
+    </div>
     </div>
     </div>
   )
