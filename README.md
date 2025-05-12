@@ -7,7 +7,7 @@
 এই প্রজেক্টটি React এবং Vite ব্যবহার করে ওয়েব অ্যাপ্লিকেশন তৈরি করার জন্য একটি মিনিমাল সেটআপ প্রদান করে। এতে হট মডিউল রিপ্লেসমেন্ট (HMR) এবং কিছু ESLint রুলস অন্তর্ভুক্ত রয়েছে।
 
 ## লাইভ লিংক
-[React + Vite Live Demo](https://assignment9-f4c83.web.app) *(এখানে তোমার প্রজেক্টের লাইভ লিংক প্রদান করবে)*
+[React + Vite Live Demo](https://assignment9-f4c83.web.app) 
 
 ## Key Features
 - **Fast Development**: React এবং Vite এর সাহায্যে দ্রুত ডেভেলপমেন্ট প্রক্রিয়া।
